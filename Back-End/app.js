@@ -10,12 +10,12 @@ app.use(morgan(':method :url :response-time'))
 
 app.use(express.json())
 
-//método GET
+//Rota GET que retorna como resposta "Hello World"
 app.get('/',(req, res) => {
     res.send('Hello World')
 })
 
-//método POST
+//Rota Post que aceita um obj e retrona os dados recebidos.
 app.post('/devorbital',(req, res) => {
     data = req.body;
     res.send(data);
